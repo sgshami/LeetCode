@@ -108,10 +108,10 @@ class Solution {
     }
     public static void main(String[] args) {
         Solution number = new Solution();
-        //System.out.println(number.intToRoman(1000));  // M
-        //System.out.println(number.intToRoman(900));   // XC
-        //System.out.println(number.intToRoman(800));   // DCCC
-        System.out.println(number.intToRoman(1111));  //
+        System.out.println(number.intToRoman(1000));  // M
+        System.out.println(number.intToRoman(900));   // CM
+        System.out.println(number.intToRoman(800));   // DCCC
+        System.out.println(number.intToRoman(1111));  //MCXI
         //number.intToRoman(1111);
     }
 }
