@@ -1,4 +1,3 @@
-package midterm1;
 import java.util.*;
 
 public class Josephus {
