@@ -8,11 +8,10 @@ class Solution {
   public int[] binarySort(int[] arr) {
     int[] sorted = new int[arr.length];
     for (int i = 0; i < arr.length; i++) {
-      //System.out.println("Insert number: " + arr[i]);
+      System.out.println("Insert number: " + arr[i]);
       int index = helper(sorted, arr[i], 0, i / 2, i);
-      //System.out.println("Insert Index: " + index);
       sorted = inserter(sorted, index, arr[i]);
-      //printer(sorted);
+      printer(sorted);
     }
     return sorted;
   }
@@ -27,14 +26,14 @@ class Solution {
 
   public int helper(int[] arr, int n, int low, int mid, int high) {
     if (low >= high) {
-      //System.out.println("Index to insert is: " + mid + " " + low + mid + high);
+      System.out.println("Index to insert is: " + mid + " " + low + mid + high);
       return low;
     } else if (n < arr[mid]) {
-      //System.out.println("Low: " + low + " " + mid + " " + high);
-      return helper(arr, n, low, mid / 2, mid - 1);
+      System.out.println("Low: " + low + " " + mid + " " + high);
+      return helper(arr, n, low, mid / 2, mid);
     } else {
-      //System.out.println("High: " + low + " " + mid + " " + high);
-      return helper(arr, n, mid + 1, ((high + mid) / 2), high);
+      System.out.println("High: " + low + " " + mid + " " + high);
+      return helper(arr, n, mid, ((high + mid) / 2) + 1, high);
     }
   }
 
@@ -42,6 +41,7 @@ class Solution {
     for (int x : arr) {
       System.out.print(x + " ");
     }
+    System.out.println();
     System.out.println();
   }
 
@@ -53,17 +53,18 @@ class Solution {
     int[] arr4 = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
     int[] arr5 = { 1, 2, 3, 4 };
     int[] arr6 = { -1, 2, 0 };
-
     //Test Binary Sort Function
     // System.out.print("Original Array: ");
     // number.printer(arr2);
     // System.out.print("Sorted Array:   ");
     // number.printer(number.binarySort(arr2));
+    number.printer(number.binarySort(arr6));
+    //number.printer(number.binarySort(arr6));
 
+    //Test findKthLargest Function
     //System.out.println(number.findKthLargest(arr1, 2)); // 5
     //System.out.println(number.findKthLargest(arr2, 4)); // 4
-    number.printer(number.binarySort(arr6));
-    System.out.println(number.findKthLargest(arr6, 2)); // 0
+    //System.out.println(number.findKthLargest(arr6, 2)); // 0
   }
 }
 // 215. Kth Largest Element in an Array
