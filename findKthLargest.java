@@ -30,10 +30,10 @@ class Solution {
       return low;
     } else if (n < arr[mid]) {
       System.out.println("Low: " + low + " " + mid + " " + high);
-      return helper(arr, n, low, mid / 2, mid);
+      return helper(arr, n, low, (high + mid) / 2, mid - 1);
     } else {
       System.out.println("High: " + low + " " + mid + " " + high);
-      return helper(arr, n, mid, ((high + mid) / 2) + 1, high);
+      return helper(arr, n, mid + 1, ((high + mid) / 2) + 1, high);
     }
   }
 
@@ -58,7 +58,7 @@ class Solution {
     // number.printer(arr2);
     // System.out.print("Sorted Array:   ");
     // number.printer(number.binarySort(arr2));
-    number.printer(number.binarySort(arr6));
+    number.printer(number.binarySort(arr4));
     //number.printer(number.binarySort(arr6));
 
     //Test findKthLargest Function
