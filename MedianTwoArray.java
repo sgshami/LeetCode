@@ -1,6 +1,6 @@
 //Code created and tested on LeetCode
 import java.util.*;
-class Solution {
+class MedianTwoArray {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int[] nums = new int[nums1.length + nums2.length];
         int index = 0; //to track current index on nums
